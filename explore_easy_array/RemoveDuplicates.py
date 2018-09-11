@@ -15,8 +15,12 @@
 说明:
 为什么返回数值是整数，但输出的答案是数组呢?
 请注意，输入数组是以“引用”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。
+
+@author Nifury
+@date 2018-09-11
 """
 class RemoveDuplicates:
+    # 策略：由于数据已经排序，可从第2项开始遍历，如与前一项相等则移除
     def removeDuplicates(self, nums):
         """
         :type nums: List[int]

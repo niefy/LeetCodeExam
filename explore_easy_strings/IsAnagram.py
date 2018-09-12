@@ -17,7 +17,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/5/st
 进阶:
 如果输入字符串包含 unicode 字符怎么办？你能否调整你的解法来应对这种情况？
 
-@author Nifury
+@author niefy
 @date 2018-09-12
 """
 class IsAnagram:

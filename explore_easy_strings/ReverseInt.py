@@ -18,7 +18,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/5/st
 注意:
 假设我们的环境只能存储 32 位有符号整数。根据这个假设，如果反转后的整数溢出，则返回 0。
 
-@author Nifury
+@author niefy
 @date 2018-09-12
 """
 

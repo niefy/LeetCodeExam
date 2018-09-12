@@ -3,7 +3,7 @@
 [LeetCode领扣中国](https://leetcode-cn.com/)探索及竞赛闯关相关代码
 
 #### 目录及命名
-按照LeetCode官网结构创建目录进行代码归类，每个文件代表一个题目，文件名称即为主函数名称（首字母大写）
+按照LeetCode官网结构创建目录进行代码归类，每个文件代表一个题目
 - explore_easy_* 探索-初级
 - explore_medium_* 探索-中级
 - explore_hard_* 探索-高级

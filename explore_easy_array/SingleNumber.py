@@ -15,7 +15,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/ar
 
 
 class SingleNumber:
-    def singleNumber(self, nums):  # 使用字典记录数字出现次数
+    def singleNumber_1(self, nums):  # 使用字典记录数字出现次数
         """
         :type nums: List[int]
         :rtype: int
@@ -31,8 +31,15 @@ class SingleNumber:
                 return key
         return None
 
+    def singleNumber_2(self, nums):  # LeetCode最佳算法：去重求和*2-原数组求和
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        return sum(set(nums))*2-sum(nums)
 
 # 测试代码
 t = SingleNumber()
 nums = [2, 2, 1]
-print(t.singleNumber(nums))
+#print(t.singleNumber(nums))
+print(t.singleNumber_2(nums))

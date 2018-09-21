@@ -23,7 +23,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/6/li
 #         self.next = None
 
 class RemoveNthFromEnd:
-    def removeNthFromEnd(self, head, n):#使用数组存放
+    def removeNthFromEnd_1(self, head, n):#使用数组存放节点
         """
         :type head: ListNode
         :type n: int
@@ -42,4 +42,27 @@ class RemoveNthFromEnd:
             array[delIndex - 1].next = array[delIndex].next
         else:
             head = array[1]
+        return head
+
+    def removeNthFromEnd_2(self, head, n):#双指针解法，时间复杂度O(n)空间复杂度O(1)，参考：https://www.zhihu.com/question/269288074
+        """
+        :type head: ListNode
+        :type n: int
+        :rtype: ListNode
+        """
+        if head.next == None:
+            return None
+        first = second = head
+        for i in range(n):  # 第一个指针移动n个位置
+            first = first.next
+
+        if first == None:  # 不够移动n个位置，直接移除头节点
+            return head.next
+
+        while first.next != None:  # 两个指针一起移动，直到前指针移动到链表末尾
+            second = second.next
+            first = first.next
+
+        second.next = second.next.next  # 删除后指针的下一个节点
+
         return head

@@ -16,7 +16,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/7/tr
    15   7
 返回它的最大深度 3 。
 
-@author niefy
+@author Niefy
 @date 2018-09-21
 """
 # Definition for a binary tree node.

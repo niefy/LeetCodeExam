@@ -10,7 +10,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/6/li
 进阶:
 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
 
-@author niefy
+@author Niefy
 @date 2018-09-20
 """
 class ReverseList:

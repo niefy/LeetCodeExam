@@ -10,7 +10,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/ar
 输出: [1,2,4]
 解释: 输入数组表示数字 123。
 
-@author niefy
+@author Niefy
 @date 2018-09-12
 """
 

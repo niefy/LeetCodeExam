@@ -9,7 +9,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/ar
 示例 1:
 输入: [2,2,1]
 输出: 1
-@author niefy
+@author Niefy
 @date 2018-09-11
 """
 

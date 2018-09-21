@@ -7,7 +7,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/6/li
 输入：1->2->4, 1->3->4
 输出：1->1->2->3->4->4
 
-@author niefy
+@author Niefy
 @date 2018-09-20
 """
 class MergeTwoLists:

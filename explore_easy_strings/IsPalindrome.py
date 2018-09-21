@@ -13,7 +13,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/5/st
 输入: "race a car"
 输出: false
 
-@author niefy
+@author Niefy
 @date 2018-09-12
 """
 import re

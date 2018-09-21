@@ -11,7 +11,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/5/st
 输入: "A man, a plan, a canal: Panama"
 输出: "amanaP :lanac a ,nalp a ,nam A"
 
-@author niefy
+@author Niefy
 @date 2018-09-12
 """
 class ReverseString:

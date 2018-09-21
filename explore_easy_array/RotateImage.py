@@ -22,7 +22,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/ar
   [9,6,3]
 ]
 
-@author niefy
+@author Niefy
 @date 2018-09-12
 """
 class RotateImage:

@@ -13,7 +13,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/6/li
 进阶：
 你能尝试使用一趟扫描实现吗？
 
-@author niefy
+@author Niefy
 @date 2018-09-17
 """
 # Definition for singly-linked list.

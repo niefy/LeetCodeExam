@@ -16,7 +16,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/6/li
 不要从你的函数中返回任何结果。
 
 
-@author niefy
+@author Niefy
 @date 2018-09-17
 """
 

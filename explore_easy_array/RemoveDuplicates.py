@@ -16,7 +16,7 @@
 为什么返回数值是整数，但输出的答案是数组呢?
 请注意，输入数组是以“引用”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。
 
-@author niefy
+@author Niefy
 @date 2018-09-11
 """
 class RemoveDuplicates:

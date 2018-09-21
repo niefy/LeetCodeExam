@@ -8,7 +8,7 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/ar
 输入: [1,2,3,1]
 输出: true
 
-@author niefy
+@author Niefy
 @date 2018-09-11
 """
 class ContainsDuplicate:

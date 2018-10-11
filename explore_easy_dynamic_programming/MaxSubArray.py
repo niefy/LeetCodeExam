@@ -12,12 +12,35 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/23/d
 如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。
 
 @author Niefy
-@date 2018-09-25
+@date 2018-10-10
 """
 class MaxSubArray:
-    def maxSubArray(self, nums):
+
+    def maxSubArray(self, nums):#动态规划方法
         """
-        :type nums: List[int]
-        :rtype: int
+        参考：https://blog.csdn.net/zwzsdy/article/details/80029796
+        :param nums: List[int]
+        :return:
         """
+        sum=nums[0]
+        n=nums[0]
+        i=1
+        while i<len(nums):
+            if n>0:
+                n=n+nums[i]
+            else:
+                n=nums[i]
+            print('n=',n,',sum=',sum)
+            if sum<n:
+                sum=n
+            i+=1
+
+        return sum
+
+
+#测试代码
+nums=[8,-19,5,-4,20]
+t=MaxSubArray()
+print('结果：',t.maxSubArray1(nums))
+
 

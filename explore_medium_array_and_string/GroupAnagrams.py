@@ -14,6 +14,9 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/29
 说明：
 所有输入均为小写字母。
 不考虑答案输出的顺序。
+
+@author Niefy
+@date 2018-11-23
 """
 class Solution:
     def groupAnagrams(self, strs):

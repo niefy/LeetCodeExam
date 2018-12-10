@@ -48,17 +48,26 @@ class TreeLinkNode:
 class Solution:
     # @param root, a tree link node
     # @return nothing
-    def connect(self, root):#需广度优先遍历，考虑示例中5->6的情况
+    def connect(self, root): #以每一层的第一个节点为头，利用next指针遍历当前层，遍历时给下一层添加next指针
         """
         :type root: TreeNode
         """
         if not root:
             return
-        if root.left:
-            root.left.next=root.right
-            self.connect(root.left)
-        if root.right:
-            self.connect(root.right)
+        levelHead=root #每一层的第一个节点
+        while levelHead:#遍历层
+            node=levelHead
+            breakNode=None
+            while node: #遍历一层内的节点
+                if node.left:#完美二叉树，有left必定有right
+                    if breakNode:
+                        breakNode.next=node.left
+                    node.left.next=node.right
+                    breakNode=node.right
+                node=node.next
+            levelHead=levelHead.left
+
+        
         
             
 

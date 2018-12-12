@@ -13,45 +13,46 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/49
   "()()()"
 ]
 
-n=4，生成结果为：[
-    "(((())))",
-    "((()()))",
-    "((())())",
-    "((()))()",
-    "(()(()))",
-    "(()()())",
-    "(()())()",
-    "(())(())",
-    "(())()()",
-    "()((()))",
-    "()(()())",
-    "()(())()",
-    "()()(())",
-    "()()()()"
-    ]
-
 @author Niefy
-@date 2018-12-11
+@date 2018-12-12
 """
 class Solution(object):
-    def generateParenthesis(self, n):#每次加多一个括号时，有几种情况（1：加左边 2：加右边 3：左右半边加到外边）
+    def isEffectParentesis(self,str):
         """
+        判断括号组合是否有效
+        """
+        countLeft=0
+        for k in str:
+            if k=='(':
+                countLeft+=1
+            else:
+                countLeft-=1
+            if countLeft<0:
+                return False
+        return countLeft==0
+
+    def generateParenthesis(self, n):
+        """
+        如n=3时，假设有1-6的6个位置，从中任选3个位置来放左括号，其余位置放右括号，剔除无效的组合后即为最终结果
         :type n: int
         :rtype: List[str]
         """
         if n<1:
             return []
-        set1={"()"}
-        i=1
-        while i<n:
-            set2=set()
-            for item in set1:
-                set2.add("()"+item)
-                set2.add(item+"()")
-                set2.add("("+item+")")
-            set1=set2
-            i+=1
-        return list(set1)
+        result=[]
+        def append(str,leftRemain,rightRemain):
+            if rightRemain>0 and rightRemain>=leftRemain:#右括号数量还有剩余(剩余右括号比剩余左括号少无效)
+                if leftRemain>0:
+                    append(str+'(',leftRemain-1,rightRemain)
+                    append(str+')',leftRemain,rightRemain-1)
+                else:
+                    append(str+')',leftRemain,rightRemain-1)
+            elif leftRemain==0:#左右大括号刚好全用掉
+                result.append(str)
+        append('(',n-1,n)
+        return result
+
+        
 
 
 # 测试代码

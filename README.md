@@ -22,6 +22,9 @@
 2. 本项目中已测试通过的代码都在LeetCode中提交过
 3. [Python语法学习](http://www.runoob.com/python3/python3-tutorial.html)
 
+#### 资源分享
+LeetCode解答查询：https://leetcode-cn.com/submissions/detail/{id}/
+
 #### 参与贡献
 1. Fork 本项目
 2. 新建 Feat_xxx 分支

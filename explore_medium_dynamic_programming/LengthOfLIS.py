@@ -19,14 +19,26 @@ https://leetcode-cn.com/explore/interview/card/top-interview-questions-medium/51
 @date 2018-01-14
 """
 class Solution:
-    def lengthOfLIS(self, nums):
+    def lengthOfLIS(self, nums):#动态规划，参考http://www.cnblogs.com/grandyang/p/4938187.html
         """
         :type nums: List[int]
         :rtype: int
         """
+        dp=[1]*len(nums)
+        res=0
+        for i in range(len(nums)):
+            for j in range(i):
+                if nums[i]>nums[j]:
+                    dp[i]=max(dp[i],dp[j]+1)
+            res=max(res,dp[i])
+        return res
+
         
 
 
 #测试代码
 t=Solution()
 print(t.lengthOfLIS([10,9,2,5,3,7,101,18]))
+print(t.lengthOfLIS([1,2,3,4,5,2]))
+print(t.lengthOfLIS([1,2,3,4,1,2,3,4]))
+print(t.lengthOfLIS([4,3,2,1]))

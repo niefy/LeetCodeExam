@@ -41,7 +41,7 @@ class Solution:
                     count+=1
         return count
 
-    def numPairsDivisibleBy60_1(self, time) -> int: #全部除以60，将余数分为等于0、小于30、等于30、大于30 的3组
+    def numPairsDivisibleBy60_1(self, time) -> int: #全部除以60，将余数分为等于0、小于30、等于30、大于30 的3组,超出时间限制
         r1,r2=[],[] #分别为小于30的余数和大于30的余数
         countR0,countR30=0,0 #余数等于30的个数
         for i in range(0,len(time)):
@@ -65,8 +65,19 @@ class Solution:
                     count+=1
         return int(count)
         
-
+    def numPairsDivisibleBy60_2(self, time) -> int: #全部除以60，将余数分为60组，按0+0、1+59、2+58配对计算
+        r=[0]*60 # r[1]表示余数为1的歌曲数量
+        for t in time:
+            r[t%60]+=1
+        count=0
+        if r[0]>1:#n选2
+            count+=r[0]*(r[0]-1)/2
+        if r[30]>1:#n选2
+            count+=r[30]*(r[30]-1)/2
+        for i in range(1,30):
+            count+=r[i]*r[60-i]
+        return int(count)
 #测试代码
 t=Solution()
-print(t.numPairsDivisibleBy60_1([30,20,150,100,40]))
-print(t.numPairsDivisibleBy60_1([60,60,60]))
+print(t.numPairsDivisibleBy60_2([30,20,150,100,40]))
+print(t.numPairsDivisibleBy60_2([60,60,60]))
